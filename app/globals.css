@@ -1,42 +1,56 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root
+{
+  --color-primary: #FEF3E2;
+  --color-secondary: #F3C623;
+  --color-box: #FFFFFF;
+  --color-hover: #FFB22C;
+  --color-text-main: #102E50;
+  --color-danger: #FDAAAA;
+  --color-success: #59AC77;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-color-scheme: dark)
+{
+  :root
+  {
+    --background: #FEF3E2;
+    --foreground: #F3C623;
   }
 }
 
 html,
-body {
+body
+{
   max-width: 100vw;
   overflow-x: hidden;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
+body
+{
+  background-color: var(--color-primary);
+  color: var(--color-text-main);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
+*
+{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-a {
+a
+{
   color: inherit;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
+@media (prefers-color-scheme: dark)
+{
+  html
+  {
     color-scheme: dark;
   }
 }
