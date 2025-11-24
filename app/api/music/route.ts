@@ -29,7 +29,7 @@ export async function POST(request: Request)
     }
 
     const newMusic = await prisma.music.create({
-      data: {
+      data:{
         title: title,
         artist: artist,
         isFavorite: false,
@@ -82,7 +82,7 @@ export async function DELETE(request: Request)
 
     if (typeof id !== 'number')
     {
-        return NextResponse.json({ error: 'Invalid ID' }, { status: 400 });
+      return NextResponse.json({ error: 'Invalid ID' }, { status: 400 });
     }
 
     await prisma.music.delete(

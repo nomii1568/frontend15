@@ -11,7 +11,7 @@ interface ApiAlbum
 
 async function getMusicData()
 {
-    const res = await fetch('https://itunes.apple.com/search?term=ive&entity=song');
+    const res = await fetch('https://itunes.apple.com/search?term=twice&entity=song');
     if (!res.ok)
     {
         throw new Error('Failed to fetch API data'); 
@@ -53,7 +53,7 @@ export default function ExplorePage()
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(
                 { 
-                    trackName: album.trackName, 
+                    title: album.trackName, 
                     artist: album.artistName 
                 }),
             });
